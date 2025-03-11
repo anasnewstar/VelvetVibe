@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelvetVibe - Image Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="VelvetVibe - A vibrant image gallery experience">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="icon" href="favicon.svg">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Logo Design.png" alt="VelvetVibe" class="logo">
+        </div>
+        <nav>
+            <a href="#" id="admin-link">Admin</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="image-grid">
+            <!-- Images will be loaded dynamically via JavaScript -->
+            <div class="placeholder-message">Loading images...</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 VelvetVibe. All rights reserved.</p>
+    </footer>
+
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Admin Login</h2>
+            <div class="admin-login">
+                <input type="text" id="admin-key" placeholder="Enter admin key">
+                <button id="login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="image-lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <div class="lightbox-zoom-controls">
+                <button class="zoom-in zoom-btn" title="Zoom In">+</button>
+                <button class="zoom-reset zoom-btn" title="Reset Zoom">Reset</button>
+                <button class="zoom-out zoom-btn" title="Zoom Out">-</button>
+            </div>
+            <div class="lightbox-container">
+                <img class="lightbox-img" id="lightbox-image" src="" alt="Enlarged image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+
+    <!-- Firebase Configuration -->
+    <script src="js/firebase-config.js"></script>
+
+    <!-- App Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
